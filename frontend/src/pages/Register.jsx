@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "../styles/auth.css";
+import { Link } from "react-router-dom";
 function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -117,7 +118,7 @@ function Register() {
         />
 <div className="auth-link">
   Already have an account?
-  <a href="/login"> Login</a>
+  <Link to="/login">Login</Link>
 </div>
         <button
           className="auth-btn"
