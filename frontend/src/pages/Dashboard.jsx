@@ -15,7 +15,7 @@ const logout = () => {
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/tasks",
+        "https://taskflow-backend-cqmr.onrender.com/api/tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ const logout = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/tasks",
+        "https://taskflow-backend-cqmr.onrender.com/api/tasks",
         {
           title: task,
         },
@@ -59,7 +59,7 @@ const logout = () => {
   const deleteTask = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://taskflow-backend-cqmr.onrender.com/api/tasks/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -79,7 +79,7 @@ const logout = () => {
   ) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://taskflow-backend-cqmr.onrender.com/api/tasks/${id}`,
         {
           status: newStatus,
         },
